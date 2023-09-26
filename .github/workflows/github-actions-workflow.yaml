@@ -36,7 +36,7 @@ jobs:
         run: dotnet --version
 
       - name: preinstall tool
-        run: $echo "pre install tools are located at ${{runner.tool_cache}}"
+        run: echo "pre install tools are located at ${{runner.tool_cache}}"
 
       - name: list preinstall tool 
         run: |
