@@ -43,8 +43,9 @@ jobs:
           ls ${{runner.tool_cache}} 
 
       - run: echo "job status is ${{job.status}}"
-
-      
-
-
-        
+  Second-Job:
+    runs-on: ubuntu-latest
+    needs: Example-Actions-Job
+    steps:
+      - run: echo "This job is running on ${{runner.os}} os provided by Github" 
+      - run: echo "This job is triggered by ${{github.event_name}}"
